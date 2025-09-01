@@ -40,47 +40,34 @@ const ResetPasswordPage = () => {
     setPasswordsMatch(newPassword === confirmPassword && newPassword !== "");
   }, [newPassword, confirmPassword]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-    // Check all conditions are met before attempting submission
-    if (!hasMinLength || !hasNumber || !hasLetter || !passwordsMatch) {
-      console.log("Password conditions not met. Please check the list.");
-      setLoading(false);
-      return;
-    }
+  // Check all conditions are met before attempting submission
+  if (!hasMinLength || !hasNumber || !hasLetter || !passwordsMatch) {
+    console.log("Password conditions not met. Please check the list.");
+    setLoading(false);
+    return;
+  }
 
-    // Simulate an API call for password reset
-    console.log("Submitting password reset request...");
-    try {
-      // Simulate a network delay
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      console.log("Password reset successful!");
+  // Simulate an API call for password reset
+  console.log("Submitting password reset request...");
+  try {
+    // Simulate a network delay
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    console.log("Password reset successful!");
 
-      // Retrieve the user's role from local storage
-      const userRole = localStorage.getItem('userRole');
+    // Go back two pages in history instead of routing to specific pages
+    window.history.go(-2);
 
-      // Check the role and redirect to the appropriate login page
-      if (userRole === 'EMPLOYER') {
-        localStorage.removeItem('userRole'); // Delete local storage key
-        router.push("/employerlogin");
-      } else if (userRole === 'STUDENT') {
-        localStorage.removeItem('userRole'); // Delete local storage key
-        router.push("/studentlogin");
-      } else {
-        // Fallback or a generic page if no role is found
-        localStorage.removeItem('userRole'); // Just in case
-        router.push("/");
-      }
-
-    } catch (error) {
-      console.error("Failed to reset password:", error);
-      // Handle login failure here
-    } finally {
-      setLoading(false);
-    }
-  };
+  } catch (error) {
+    console.error("Failed to reset password:", error);
+    // Handle login failure here
+  } finally {
+    setLoading(false);
+  }
+};
 
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
