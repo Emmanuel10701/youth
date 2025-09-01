@@ -325,7 +325,7 @@ const UserManagementTable = ({ users, setUsers }) => {
 
   const handleAddAdmin = async (userData) => {
     try {
-      const response = await fetch('http://localhost:3000/api/adminregister', {
+      const response = await fetch('/api/adminregister', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -351,6 +351,9 @@ const UserManagementTable = ({ users, setUsers }) => {
     setIsDeleteModalOpen(true);
   };
 
+
+
+  
   const handleDeleteUser = async () => {
     if (userToDelete) {
       const { id, role } = userToDelete;
@@ -358,17 +361,17 @@ const UserManagementTable = ({ users, setUsers }) => {
 
       switch (role) {
         case 'ADMIN':
-          endpoint = `http://localhost:3000/api/adminregister/${id}`;
+          endpoint = `/api/adminregister/${id}`;
           break;
         case 'Subscriber':
-          endpoint = `http://localhost:3000/api/subscriber/${id}`;
+          endpoint = `/api/subscriber/${id}`;
           break;
         case 'Employer':
-          endpoint = `http://localhost:3000/api/employer/${id}`;
+          endpoint = `/api/employer/${id}`;
           break;
         case 'Student':
         case 'Job Seeker':
-          endpoint = `http://localhost:3000/api/student/${id}`;
+          endpoint = `/api/student/${id}`;
           break;
         default:
           console.error("Unknown user role:", role);
@@ -504,36 +507,35 @@ const UserManagementTable = ({ users, setUsers }) => {
                       {user.status}
                     </span>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <div className="flex items-center space-x-2 md:space-x-3">
-                      <button
-                        onClick={() => handleViewUser(user)}
-                        className="text-gray-600 hover:text-gray-900 transition-colors cursor-pointer p-1 rounded hover:bg-gray-100"
-                        title="View User Details"
-                      >
-                        <Eye size={18} />
-                      </button>
-                      <a
-                        href={`mailto:${user.email}`}
-                        className="text-green-600 hover:text-green-900 transition-colors cursor-pointer p-1 rounded hover:bg-gray-100"
-                        title="Send Email"
-                      >
-                        <Mail size={18} />
-                      </a>
-                      {user.role === 'ADMIN' && (
-                        <button
-                          onClick={() => handleDeleteUserConfirmation(user)}
-                          className="text-red-600 hover:text-red-900 transition-colors cursor-pointer p-1 rounded hover:bg-gray-100"
-                          title="Delete User"
-                        >
-                          <Trash2 size={18} />
-                        </button>
-                      )}
-                      <button className="text-gray-600 hover:text-gray-900 transition-colors cursor-pointer p-1 rounded hover:bg-gray-100">
-                        <MoreVertical size={18} />
-                      </button>
-                    </div>
-                  </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+  <div className="flex items-center space-x-2 md:space-x-3">
+    <button
+      onClick={() => handleViewUser(user)}
+      className="text-gray-600 hover:text-gray-900 transition-colors cursor-pointer p-1 rounded hover:bg-gray-100"
+      title="View User Details"
+    >
+      <Eye size={18} />
+    </button>
+    <a
+      href={`mailto:${user.email}`}
+      className="text-green-600 hover:text-green-900 transition-colors cursor-pointer p-1 rounded hover:bg-gray-100"
+      title="Send Email"
+    >
+      <Mail size={18} />
+    </a>
+    {/* Delete button for all user types */}
+    <button
+      onClick={() => handleDeleteUserConfirmation(user)}
+      className="text-red-600 hover:text-red-900 transition-colors cursor-pointer p-1 rounded hover:bg-gray-100"
+      title="Delete User"
+    >
+      <Trash2 size={18} />
+    </button>
+    <button className="text-gray-600 hover:text-gray-900 transition-colors cursor-pointer p-1 rounded hover:bg-gray-100">
+      <MoreVertical size={18} />
+    </button>
+  </div>
+</td>
                 </tr>
               ))
             ) : (
@@ -600,27 +602,27 @@ const UserManagementTable = ({ users, setUsers }) => {
         <UserDetails user={selectedUser} />
       </Modal>
 
-      {/* Delete Confirmation Modal */}
-      <Modal isOpen={isDeleteModalOpen} onClose={() => setIsDeleteModalOpen(false)} title="Confirm Deletion">
-        {userToDelete && (
-          <div className="space-y-4 text-center font-sans">
-            <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100">
-              <Trash2 className="h-6 w-6 text-red-600" />
-            </div>
-            <h3 className="text-lg font-medium text-gray-900 font-display">Delete User</h3>
-            <p className="text-gray-700">Are you sure you want to delete the user <span className="font-bold">{userToDelete.name}</span>?</p>
-            <p className="text-sm text-red-500">This action cannot be undone.</p>
-            <div className="flex justify-center gap-4 mt-6">
-              <button onClick={() => setIsDeleteModalOpen(false)} className="px-6 py-2.5 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition-all font-medium">
-                Cancel
-              </button>
-              <button onClick={handleDeleteUser} className="px-6 py-2.5 rounded-lg bg-red-600 text-white font-medium hover:bg-red-700 transition-all shadow-md hover:shadow-lg">
-                Delete User
-              </button>
-            </div>
-          </div>
-        )}
-      </Modal>
+    {/* Delete Confirmation Modal */}
+<Modal isOpen={isDeleteModalOpen} onClose={() => setIsDeleteModalOpen(false)} title="Confirm Deletion">
+  {userToDelete && (
+    <div className="space-y-4 text-center font-sans">
+      <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100">
+        <Trash2 className="h-6 w-6 text-red-600" />
+      </div>
+      <h3 className="text-lg font-medium text-gray-900 font-display">Delete User</h3>
+      <p className="text-gray-700">Are you sure you want to delete the user <span className="font-bold">{userToDelete.name}</span>?</p>
+      <p className="text-sm text-red-500">This action cannot be undone.</p>
+      <div className="flex justify-center gap-4 mt-6">
+        <button onClick={() => setIsDeleteModalOpen(false)} className="px-6 py-2.5 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition-all font-medium">
+          Cancel
+        </button>
+        <button onClick={handleDeleteUser} className="px-6 py-2.5 rounded-lg bg-red-600 text-white font-medium hover:bg-red-700 transition-all shadow-md hover:shadow-lg">
+          Delete User
+        </button>
+      </div>
+    </div>
+  )}
+</Modal>
     </div>
   );
 };
@@ -636,10 +638,10 @@ const App = () => {
       try {
         setLoading(true);
         const [adminRes, subscriberRes, employerRes, studentRes] = await Promise.all([
-          fetch('http://localhost:3000/api/adminregister'),
-          fetch('http://localhost:3000/api/subscriber'),
-          fetch('http://localhost:3000/api/employer'),
-          fetch('http://localhost:3000/api/student')
+          fetch('/api/adminregister'),
+          fetch('/api/subscriber'),
+          fetch('/api/employer'),
+          fetch('/api/student')
         ]);
 
         if (!adminRes.ok || !subscriberRes.ok || !employerRes.ok || !studentRes.ok) {

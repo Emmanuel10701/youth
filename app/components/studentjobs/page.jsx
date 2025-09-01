@@ -380,7 +380,7 @@ const JobDetails = ({ job, studentProfile, onGoBack, onJobApplied }) => {
     if (!job || !job.id) return;
     setApplicantsLoading(true);
     try {
-      const response = await fetch(`http://localhost:3000/api/applied?jobId=${job.id}`); // Changed from /api/applied to /api/applicantsapi
+      const response = await fetch(`/api/applicants?jobId=${job.id}`); // Changed from /api/applied to /api/applicants
       if (!response.ok) {
         throw new Error('Failed to fetch applicant count');
       }
@@ -769,7 +769,7 @@ export default function App() {
     const fetchJobs = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch('http://localhost:3000/api/jobs/');
+        const response = await fetch('/api/jobs/');
         if (!response.ok) {
           throw new Error('Failed to fetch jobs');
         }

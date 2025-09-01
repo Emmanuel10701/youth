@@ -360,7 +360,7 @@ const ApplicantDetailsModal = ({ applicant, onClose, onEmail }) => {
           <div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Resume</h3>
             <a 
-              href={`http://localhost:3000${applicant.student.resumePath}`} 
+              href={`https://youth-mu.vercel.app/${applicant.student.resumePath}`} 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"

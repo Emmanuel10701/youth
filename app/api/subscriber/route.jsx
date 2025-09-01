@@ -7,7 +7,7 @@ const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: process.env.EMAIL_USER, // your gmail
-    pass: process.env.EMAIL_PASS  // app password (not your main password!)
+    pass: process.env.EMAIL_PASS // app password (not your main password!)
   },
 });
 
@@ -49,7 +49,7 @@ export async function POST(req) {
           <p>Dear <strong>${email}</strong>,</p>
           <p>You have successfully subscribed to our newsletter updates. 🚀</p>
           <p>Stay tuned for the latest news and updates directly in your inbox!</p>
-          <div class="footer">© 2025 Your Company. All rights reserved.</div>
+          <div class="footer">© 2025 KCUTSA. All rights reserved.</div>
         </div>
       </body>
       </html>
@@ -57,7 +57,7 @@ export async function POST(req) {
 
     // Send email
     await transporter.sendMail({
-      from: `"Your Company" <${process.env.EMAIL_USER}>`,
+      from: `"KCUTSA" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: "🎉 Subscription Successful",
       html: htmlContent,
@@ -71,7 +71,6 @@ export async function POST(req) {
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }
-
 
 export async function GET() {
   try {
