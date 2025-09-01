@@ -164,7 +164,8 @@ const ForgotPasswordPage = () => {
         <p>
           Remembered your password?{' '}
           <span
-            onClick={() => router.back()}
+                onClick={() => window.history.back()}
+
             className="text-indigo-400 font-medium hover:underline cursor-pointer transition-colors duration-200"
           >
             Log in
