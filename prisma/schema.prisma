@@ -1,0 +1,337 @@
+// ================== DATASOURCE & CLIENT ==================
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// ================== ENUMS ==================
+enum Role {
+  STUDENT
+  EMPLOYER
+  ADMIN
+}
+
+// ================== USER & AUTH ==================
+model User {
+  id              String   @id @default(cuid())
+  name            String?
+  email           String?   @unique
+  password        String?
+  emailVerified   DateTime?
+  image           String?
+  role            Role      @default(STUDENT)
+
+  // Relations - EXACTLY THE SAME STRUCTURE
+  employerProfile   EmployerProfile?
+  studentProfile    StudentProfile?
+  Admin             Admin?
+  company           Company?
+
+  newsletters       Newsletter[]
+  accounts          Account[]
+  sessions          Session[]
+  passwordResets    PasswordReset[]
+
+  StudentEntireProfile StudentEntireProfile?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model VerificationToken {
+  id         String   @id @default(cuid())
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model PasswordReset {
+  id        String   @id @default(cuid())
+  userId    String
+  token     String   @unique
+  createdAt DateTime @default(now())
+  expires   DateTime
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ================== SUBSCRIBERS & NEWSLETTERS ==================
+model Subscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
+
+model Newsletter {
+  id        String   @id @default(cuid())
+  subject   String
+  content   String
+  sentAt    DateTime @default(now())
+  sentById  String
+  sentBy    User     @relation(fields: [sentById], references: [id], onDelete: Cascade)
+  recipients String[]
+}
+
+// ================== STUDENT MODELS ==================
+model StudentProfile {
+  id           String   @id @default(cuid())
+  userId       String   @unique
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  institution  String
+  course       String
+  yearOfStudy  String?
+  constituency String
+  ward         String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model StudentEntireProfile {
+  id              String   @id @default(cuid())
+  userId          String   @unique
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  email           String?
+  name            String
+  summary         String?
+  resumePath      String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  skills          String[]
+
+  // Education level and job preferences
+  educationLevel  String?
+  experienceRange String?
+  studentStatus   String?
+  jobType         String?
+
+  // One-to-one relationship with Address - CORRECTED
+  address         Address?  @relation(fields: [addressId], references: [id])
+  addressId       String?   @unique
+
+  // One-to-many relationships
+  education        Education[]
+  experience       Experience[]
+  achievements     Achievement[]
+  certifications   Certification[]
+  jobs             JobApplication[]
+}
+
+model Address {
+  id             String   @id @default(cuid())
+  county         String
+  subCounty      String
+  ward           String?
+  details        String?
+  
+  // Back relation - this is optional but good for querying
+  studentProfile StudentEntireProfile?
+}
+
+model Education {
+  id               String   @id @default(cuid())
+  school           String
+  degree           String
+  fieldOfStudy     String?
+  graduationYear   Int?
+  isCurrent        Boolean?
+  studentProfileId String
+  studentProfile   StudentEntireProfile @relation(fields: [studentProfileId], references: [id], onDelete: Cascade)
+}
+
+model Experience {
+  id          String   @id @default(cuid())
+  title       String
+  company     String
+  startDate   DateTime
+  endDate     DateTime?
+  isCurrent   Boolean
+  description String
+  profileId   String
+  profile     StudentEntireProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+}
+
+model Achievement {
+  id               String   @id @default(cuid())
+  name             String
+  studentProfileId String
+  studentProfile   StudentEntireProfile @relation(fields: [studentProfileId], references: [id], onDelete: Cascade)
+}
+
+model Certification {
+  id               String   @id @default(cuid())
+  name             String
+  issuingBody      String?
+  studentProfileId String
+  studentProfile   StudentEntireProfile @relation(fields: [studentProfileId], references: [id], onDelete: Cascade)
+}
+
+// ================== EMPLOYER MODELS ==================
+model EmployerProfile {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  companyId   String?
+  company     Company? @relation(fields: [companyId], references: [id])
+  companyName String
+  companySize String?
+  industry    String?
+  phone       String?
+  website     String?
+  position    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Company {
+  id                         String   @id @default(cuid())
+  userId                     String   @unique
+  user                       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name                       String
+  industry                   String
+  description                String
+  foundedDate                DateTime
+  companySize                String
+  logoUrl                    String
+  email                      String   @unique
+  jobs                       Job[]
+
+  phone                      String
+  website                    String?
+  street                     String
+  city                       String
+  county                     String
+  country                    String
+  postalCode                 String
+  businessRegistrationNumber String
+  kraPin                     String
+  businessPermitNumber       String
+  licenseExpiryDate          DateTime
+  vatNumber                  String
+  legalName                  String
+  linkedin                   String?
+  twitter                    String?
+  facebook                   String?
+  instagram                  String?
+
+  employers                  EmployerProfile[]
+  createdAt                  DateTime @default(now())
+  updatedAt                  DateTime @updatedAt
+}
+
+// ================== ADMIN MODELS ==================
+model Admin {
+  id          String   @id @default(cuid())
+  name        String
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  email       String   @unique
+  role        String
+  status      String
+  department  String
+  title       String
+  accessLevel String
+  phoneNumber String
+  street      String
+  city        String
+  postalCode  String
+  country     String
+  createdAt   DateTime @default(now())
+}
+
+model News {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  date        DateTime @default(now())
+}
+
+model Video {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  url         String
+  createdAt   DateTime @default(now())
+}
+
+model Event {
+  id               String   @id @default(cuid())
+  title            String
+  date             DateTime
+  time             String
+  location         String
+  registrationLink String?
+  description      String?
+  createdAt        DateTime @default(now())
+}
+
+// ================== JOB MODELS ==================
+model Job {
+  id               String   @id @default(cuid())
+  companyId        String?
+  company          Company? @relation(fields: [companyId], references: [id])
+  title            String
+  description      String
+  location         String
+  officeType       String
+  salaryRange      String?
+  type             String
+  qualifications   String?
+  skills           String?
+  benefits         String?
+  applications     JobApplication[]
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model JobApplication {
+  id          String   @id @default(cuid())
+  jobId       String
+  job         Job      @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  studentId   String
+  student     StudentEntireProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  coverLetter String?
+  status      String   @default("APPLIED")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model JobAlert {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  subscribedAt DateTime @default(now())
+  isActive    Boolean  @default(true)
+  preferences Json?
+}

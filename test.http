@@ -1,0 +1,138 @@
+Base URL
+@baseUrl = http://localhost:3000
+
+###Create Company for James Kariuki (Kariuki Logistics Ltd)
+POST {{baseUrl}}/api/company
+Content-Type: application/json
+
+{
+"name": "Kariuki Logistics Ltd",
+"industry": "Logistics & Transport",
+"description": "A leading logistics and transportation company providing reliable cargo and freight services across East Africa. Specializing in road freight, warehousing, and supply chain solutions.",
+"foundedDate": "2010-05-15",
+"companySize": "200-500",
+"email": "info@kariukilogistics.co.ke",
+"phone": "+254700123456",
+"website": "https://kariukilogistics.co.ke",
+"street": "Mombasa Road",
+"city": "Nairobi",
+"county": "Nairobi",
+"country": "Kenya",
+"postalCode": "00100",
+"businessRegistrationNumber": "CPT/2010/123456",
+"kraPin": "P051234567X",
+"businessPermitNumber": "NBI/BP/2023/789",
+"licenseExpiryDate": "2024-12-31",
+"vatNumber": "VAT00123456",
+"legalName": "Kariuki Logistics Limited",
+"linkedin": "https://linkedin.com/company/kariuki-logistics",
+"twitter": "https://twitter.com/kariukilogistics",
+"facebook": "https://facebook.com/kariukilogistics",
+"instagram": "https://instagram.com/kariukilogistics",
+"employeeId": "cmerg2xc2000nujjsdadbegq0",
+"logoUrl": "https://example.com/logo/kariuki.png"
+}
+
+####Create Company for Linda Wambui (Wambui Tech Solutions)
+POST {{baseUrl}}/api/company
+Content-Type: application/json
+
+{
+"name": "Wambui Tech Solutions",
+"industry": "Information Technology",
+"description": "Innovative technology solutions provider specializing in software development, IT consulting, and digital transformation services for businesses of all sizes.",
+"foundedDate": "2018-02-10",
+"companySize": "50-100",
+"email": "contact@wambuitech.com",
+"phone": "+254701987654",
+"website": "https://wambuitech.com",
+"street": "Ngong Road",
+"city": "Nairobi",
+"county": "Nairobi",
+"country": "Kenya",
+"postalCode": "00100",
+"businessRegistrationNumber": "CPT/2018/654321",
+"kraPin": "P056543218Y",
+"businessPermitNumber": "NBI/BP/2023/456",
+"licenseExpiryDate": "2024-12-31",
+"vatNumber": "VAT00654321",
+"legalName": "Wambui Tech Solutions Limited",
+"linkedin": "https://linkedin.com/company/wambui-tech",
+"twitter": "https://twitter.com/wambuitech",
+"facebook": "https://facebook.com/wambuitech",
+"instagram": "https://instagram.com/wambuitech",
+"employeeId": "cmerg3bvw000pujjs46xjyeca",
+"logoUrl": "https://example.com/logo/wambui.png"
+}
+
+###Create Company for Grace Njeri (Njeri Foods Ltd)
+POST {{baseUrl}}/api/company
+Content-Type: application/json
+
+{
+"name": "Njeri Foods Ltd",
+"industry": "Food & Beverages",
+"description": "Premium food processing and distribution company offering high-quality Kenyan food products to local and international markets. Specializing in organic and traditional foods.",
+"foundedDate": "2005-11-20",
+"companySize": "500-1000",
+"email": "info@njerifoods.com",
+"phone": "+254703444555",
+"website": "https://njerifoods.com",
+"street": "Industrial Area",
+"city": "Nairobi",
+"county": "Nairobi",
+"country": "Kenya",
+"postalCode": "00100",
+"businessRegistrationNumber": "CPT/2005/987654",
+"kraPin": "P059876543Z",
+"businessPermitNumber": "NBI/BP/2023/123",
+"licenseExpiryDate": "2024-12-31",
+"vatNumber": "VAT00987654",
+"legalName": "Njeri Foods Limited",
+"linkedin": "https://linkedin.com/company/njeri-foods",
+"twitter": "https://twitter.com/njerifoods",
+"facebook": "https://facebook.com/njerifoods",
+"instagram": "https://instagram.com/njerifoods",
+"employeeId": "cmerg41a8000rujjssqho9eaw",
+"logoUrl": "https://example.com/logo/njeri.png"
+}
+
+###Create Company for Samuel Kiptoo (Kiptoo Construction Co.)
+POST {{baseUrl}}/api/company
+Content-Type: application/json
+
+{
+"name": "Kiptoo Construction Co.",
+"industry": "Construction & Real Estate",
+"description": "Leading construction company with over 15 years of experience in building infrastructure, commercial buildings, and residential properties across Kenya and East Africa.",
+"foundedDate": "2008-03-05",
+"companySize": "1000+",
+"email": "projects@kiptooconstruction.co.ke",
+"phone": "+254704666777",
+"website": "https://kiptooconstruction.co.ke",
+"street": "Thika Road",
+"city": "Nairobi",
+"county": "Nairobi",
+"country": "Kenya",
+"postalCode": "00100",
+"businessRegistrationNumber": "CPT/2008/456789",
+"kraPin": "P054567890A",
+"businessPermitNumber": "NBI/BP/2023/987",
+"licenseExpiryDate": "2024-12-31",
+"vatNumber": "VAT00456789",
+"legalName": "Kiptoo Construction Company Limited",
+"linkedin": "https://linkedin.com/company/kiptoo-construction",
+"twitter": "https://twitter.com/kiptooconstruction",
+"facebook": "https://facebook.com/kiptooconstruction",
+"instagram": "https://instagram.com/kiptooconstruction",
+"employeeId": "cmerg48m1000tujjsabakcr5v",
+"logoUrl": "https://example.com/logo/kiptoo.png"
+}
+
+### Get All Companies
+GET {{baseUrl}}/api/company
+Content-Type: application/json
+
+### Get Company by ID (replace :id with actual company ID)
+GET {{baseUrl}}/api/company/cmerifflm0002uj7sdw6e17ro
+Content-Type: application/json

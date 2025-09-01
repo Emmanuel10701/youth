@@ -1,0 +1,351 @@
+### Get all jobs
+GET http://localhost:3000/api/jobs
+Content-Type: application/json
+
+### KARIUKI LOGISTICS LTD JOBS ###
+
+### Job 1 for Kariuki Logistics
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Logistics Manager",
+  "description": "Oversee daily logistics operations, manage fleet operations, and optimize supply chain processes. Ensure timely delivery of goods and maintain vendor relationships.",
+  "location": "Nairobi, Kenya",
+  "officeType": "On-site",
+  "salaryRange": "KSh 150,000 - 200,000",
+  "type": "Full-time",
+  "qualifications": "Bachelor's degree in Logistics or Supply Chain Management, 5+ years experience in logistics",
+  "skills": "Supply Chain Management, Fleet Management, ERP Systems, Inventory Control",
+  "benefits": "Health insurance, Transport allowance, Performance bonus, Annual leave",
+  "companyId": "cmerifflm0002uj7sdw6e17ro"
+}
+
+### Job 2 for Kariuki Logistics
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Truck Driver",
+  "description": "Transport goods safely across East Africa, maintain vehicle condition, and ensure timely deliveries. Long-haul and regional routes available.",
+  "location": "Mombasa Road, Nairobi",
+  "officeType": "Field",
+  "salaryRange": "KSh 80,000 - 120,000",
+  "type": "Full-time",
+  "qualifications": "Valid BCE driving license, 3+ years experience, clean driving record",
+  "skills": "Defensive Driving, Route Planning, Vehicle Maintenance, Time Management",
+  "benefits": "Accommodation allowance, Fuel allowance, Medical cover, Overtime pay",
+  "companyId": "cmerifflm0002uj7sdw6e17ro"
+}
+
+### Job 3 for Kariuki Logistics
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Warehouse Supervisor",
+  "description": "Manage warehouse operations, inventory control, and staff supervision. Ensure efficient storage and distribution of goods.",
+  "location": "Industrial Area, Nairobi",
+  "officeType": "On-site",
+  "salaryRange": "KSh 120,000 - 150,000",
+  "type": "Full-time",
+  "qualifications": "Diploma in Warehouse Management, 3+ years supervisory experience",
+  "skills": "Inventory Management, WMS, Team Leadership, Safety Compliance",
+  "benefits": "Health insurance, Housing allowance, Performance bonus, Training opportunities",
+  "companyId": "cmerifflm0002uj7sdw6e17ro"
+}
+
+### Job 4 for Kariuki Logistics
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Logistics Coordinator",
+  "description": "Coordinate transportation schedules, track shipments, and communicate with clients and drivers. Ensure smooth logistics operations.",
+  "location": "Nairobi, Kenya",
+  "officeType": "Hybrid",
+  "salaryRange": "KSh 90,000 - 120,000",
+  "type": "Full-time",
+  "qualifications": "Degree in Business Administration, 2+ years coordination experience",
+  "skills": "Communication, Organization, Problem Solving, Microsoft Office",
+  "benefits": "Health insurance, Transport allowance, Flexible hours, Career growth",
+  "companyId": "cmerifflm0002uj7sdw6e17ro"
+}
+
+### Job 5 for Kariuki Logistics
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Fleet Maintenance Technician",
+  "description": "Maintain and repair company vehicles, conduct regular inspections, and ensure fleet reliability and safety standards.",
+  "location": "Mombasa Road, Nairobi",
+  "officeType": "On-site",
+  "salaryRange": "KSh 100,000 - 140,000",
+  "type": "Full-time",
+  "qualifications": "Certificate in Automotive Engineering, 4+ years experience",
+  "skills": "Vehicle Repair, Preventive Maintenance, Diagnostic Tools, Safety Procedures",
+  "benefits": "Tool allowance, Medical cover, Overtime pay, Training certification",
+  "companyId": "cmerifflm0002uj7sdw6e17ro"
+}
+
+### WAMBUI TECH SOLUTIONS JOBS ###
+
+### Job 1 for Wambui Tech
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Senior Software Developer",
+  "description": "Develop and maintain software applications, lead technical projects, and mentor junior developers. Work with modern tech stack.",
+  "location": "Ngong Road, Nairobi",
+  "officeType": "Hybrid",
+  "salaryRange": "KSh 250,000 - 350,000",
+  "type": "Full-time",
+  "qualifications": "Bachelor's in Computer Science, 5+ years software development experience",
+  "skills": "JavaScript, React, Node.js, Python, AWS",
+  "benefits": "Health insurance, Remote work options, Training budget, Stock options",
+  "companyId": "cmerifjot0003uj7s13q63p0v"
+}
+
+### Job 2 for Wambui Tech
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "IT Support Specialist",
+  "description": "Provide technical support to clients, troubleshoot hardware/software issues, and maintain IT infrastructure.",
+  "location": "Nairobi, Kenya",
+  "officeType": "On-site",
+  "salaryRange": "KSh 80,000 - 120,000",
+  "type": "Full-time",
+  "qualifications": "Diploma in IT, 2+ years support experience, certifications preferred",
+  "skills": "Troubleshooting, Networking, Hardware Repair, Customer Service",
+  "benefits": "Health insurance, Transport allowance, Certification support, Flexible hours",
+  "companyId": "cmerifjot0003uj7s13q63p0v"
+}
+
+### Job 3 for Wambui Tech
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "UX/UI Designer",
+  "description": "Design user interfaces and experiences for web and mobile applications. Create wireframes, prototypes, and design systems.",
+  "location": "Nairobi, Kenya",
+  "officeType": "Remote",
+  "salaryRange": "KSh 150,000 - 220,000",
+  "type": "Full-time",
+  "qualifications": "Portfolio required, 3+ years UX/UI design experience",
+  "skills": "Figma, Adobe Creative Suite, User Research, Prototyping",
+  "benefits": "Remote work, Design software subscription, Creative freedom, Health insurance",
+  "companyId": "cmerifjot0003uj7s13q63p0v"
+}
+
+### Job 4 for Wambui Tech
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Data Analyst",
+  "description": "Analyze business data, create reports and dashboards, and provide insights for decision-making. Work with SQL and visualization tools.",
+  "location": "Ngong Road, Nairobi",
+  "officeType": "Hybrid",
+  "salaryRange": "KSh 180,000 - 250,000",
+  "type": "Full-time",
+  "qualifications": "Degree in Statistics or related field, 3+ years data analysis experience",
+  "skills": "SQL, Python, Tableau, Excel, Statistics",
+  "benefits": "Health insurance, Learning budget, Flexible hours, Performance bonus",
+  "companyId": "cmerifjot0003uj7s13q63p0v"
+}
+
+### Job 5 for Wambui Tech
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "DevOps Engineer",
+  "description": "Manage cloud infrastructure, implement CI/CD pipelines, and ensure system reliability and scalability.",
+  "location": "Nairobi, Kenya",
+  "officeType": "Remote",
+  "salaryRange": "KSh 280,000 - 380,000",
+  "type": "Full-time",
+  "qualifications": "3+ years DevOps experience, cloud certifications preferred",
+  "skills": "AWS, Docker, Kubernetes, Jenkins, Terraform",
+  "benefits": "Remote work, Cloud certification fees, Health insurance, Stock options",
+  "companyId": "cmerifjot0003uj7s13q63p0v"
+}
+
+### KIPTOO CONSTRUCTION JOBS ###
+
+### Job 1 for Kiptoo Construction
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Site Engineer",
+  "description": "Supervise construction projects, ensure quality standards, and manage on-site operations. Civil engineering projects across Kenya.",
+  "location": "Thika Road, Nairobi",
+  "officeType": "On-site",
+  "salaryRange": "KSh 180,000 - 250,000",
+  "type": "Full-time",
+  "qualifications": "Bachelor's in Civil Engineering, 4+ years construction experience",
+  "skills": "Project Management, AutoCAD, Quality Control, Site Supervision",
+  "benefits": "Site allowance, Health insurance, Housing allowance, Annual bonus",
+  "companyId": "cmeriigcw0004uj7sykjzq026"
+}
+
+### Job 2 for Kiptoo Construction
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Construction Project Manager",
+  "description": "Manage construction projects from inception to completion, budget control, and team coordination. Large-scale infrastructure projects.",
+  "location": "Nairobi, Kenya",
+  "officeType": "On-site",
+  "salaryRange": "KSh 300,000 - 450,000",
+  "type": "Full-time",
+  "qualifications": "Degree in Construction Management, 7+ years project management experience",
+  "skills": "Budget Management, Team Leadership, Risk Management, Contract Negotiation",
+  "benefits": "Company vehicle, Health insurance, Performance bonus, Travel allowance",
+  "companyId": "cmeriigcw0004uj7sykjzq026"
+}
+
+### Job 3 for Kiptoo Construction
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Quantity Surveyor",
+  "description": "Prepare cost estimates, manage project budgets, and provide financial oversight for construction projects.",
+  "location": "Thika Road, Nairobi",
+  "officeType": "Hybrid",
+  "salaryRange": "KSh 200,000 - 280,000",
+  "type": "Full-time",
+  "qualifications": "Degree in Quantity Surveying, 4+ years experience, professional registration",
+  "skills": "Cost Estimation, Budget Management, Tendering, Contract Management",
+  "benefits": "Professional fees, Health insurance, Housing allowance, Annual bonus",
+  "companyId": "cmeriigcw0004uj7sykjzq026"
+}
+
+### Job 4 for Kiptoo Construction
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Construction Safety Officer",
+  "description": "Ensure compliance with safety regulations, conduct safety training, and implement safety protocols on construction sites.",
+  "location": "Various Sites",
+  "officeType": "On-site",
+  "salaryRange": "KSh 120,000 - 160,000",
+  "type": "Full-time",
+  "qualifications": "Safety certification, 3+ years construction safety experience",
+  "skills": "OSHA Standards, Risk Assessment, Safety Training, Incident Investigation",
+  "benefits": "Site allowance, Health insurance, Safety gear provided, Training opportunities",
+  "companyId": "cmeriigcw0004uj7sykjzq026"
+}
+
+### Job 5 for Kiptoo Construction
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Heavy Equipment Operator",
+  "description": "Operate construction machinery including excavators, bulldozers, and cranes. Experience with various heavy equipment required.",
+  "location": "Construction Sites",
+  "officeType": "On-site",
+  "salaryRange": "KSh 100,000 - 150,000",
+  "type": "Full-time",
+  "qualifications": "Equipment operation certification, 3+ years experience",
+  "skills": "Excavator Operation, Bulldozer Operation, Safety Procedures, Equipment Maintenance",
+  "benefits": "Site allowance, Overtime pay, Health insurance, Training certification",
+  "companyId": "cmeriigcw0004uj7sykjzq026"
+}
+
+### NJERI FOODS LTD JOBS ###
+
+### Job 1 for Njeri Foods
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Food Technologist",
+  "description": "Develop new food products, improve existing recipes, and ensure quality standards in food production. Focus on organic and traditional foods.",
+  "location": "Industrial Area, Nairobi",
+  "officeType": "On-site",
+  "salaryRange": "KSh 150,000 - 200,000",
+  "type": "Full-time",
+  "qualifications": "Degree in Food Science, 3+ years food technology experience",
+  "skills": "Product Development, Quality Control, Food Safety, Recipe Formulation",
+  "benefits": "Health insurance, Housing allowance, Product sampling, Research opportunities",
+  "companyId": "cmeriiknl0005uj7s3kwb334p"
+}
+
+### Job 2 for Njeri Foods
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Quality Assurance Manager",
+  "description": "Oversee quality control processes, implement food safety standards, and ensure compliance with regulatory requirements.",
+  "location": "Industrial Area, Nairobi",
+  "officeType": "On-site",
+  "salaryRange": "KSh 200,000 - 280,000",
+  "type": "Full-time",
+  "qualifications": "Degree in Food Science, 5+ years QA experience, HACCP certification",
+  "skills": "Quality Management, HACCP, Auditing, Regulatory Compliance",
+  "benefits": "Health insurance, Performance bonus, Professional development, Housing allowance",
+  "companyId": "cmeriiknl0005uj7s3kwb334p"
+}
+
+### Job 3 for Njeri Foods
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Sales Representative",
+  "description": "Promote and sell food products to retailers and distributors. Build customer relationships and achieve sales targets.",
+  "location": "Nairobi Region",
+  "officeType": "Field",
+  "salaryRange": "KSh 80,000 + Commission",
+  "type": "Full-time",
+  "qualifications": "Diploma in Sales/Marketing, 2+ years sales experience",
+  "skills": "Sales Techniques, Customer Relationship, Negotiation, Market Knowledge",
+  "benefits": "Commission, Travel allowance, Health insurance, Sales bonuses",
+  "companyId": "cmeriiknl0005uj7s3kwb334p"
+}
+
+### Job 4 for Njeri Foods
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Production Supervisor",
+  "description": "Supervise food production line, ensure efficiency, and maintain quality standards in manufacturing process.",
+  "location": "Industrial Area, Nairobi",
+  "officeType": "On-site",
+  "salaryRange": "KSh 120,000 - 160,000",
+  "type": "Full-time",
+  "qualifications": "Diploma in Food Production, 3+ years supervisory experience",
+  "skills": "Production Management, Team Leadership, Quality Control, Process Improvement",
+  "benefits": "Health insurance, Shift allowance, Performance bonus, Training opportunities",
+  "companyId": "cmeriiknl0005uj7s3kwb334p"
+}
+
+### Job 5 for Njeri Foods
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Export Coordinator",
+  "description": "Manage international shipments, handle export documentation, and ensure compliance with international food regulations.",
+  "location": "Nairobi, Kenya",
+  "officeType": "Hybrid",
+  "salaryRange": "KSh 140,000 - 190,000",
+  "type": "Full-time",
+  "qualifications": "Degree in International Business, 3+ years export experience",
+  "skills": "Export Documentation, Customs Clearance, International Logistics, Regulatory Compliance",
+  "benefits": "Health insurance, Travel opportunities, Language training, Performance bonus",
+  "companyId": "cmeriiknl0005uj7s3kwb334p"
+}

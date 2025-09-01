@@ -1,0 +1,613 @@
+### Base URL
+@baseUrl = http://localhost:3000
+
+### 1. Create Profile for John Mwangi
+POST {{baseUrl}}/api/studententireprofile
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="userId"
+
+cmerex17n0002ujvsjajy2l4q
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+John Mwangi
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+john.mwangi@example.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="summary"
+
+Business Management student with strong analytical skills and interest in market research. Seeking internship opportunities in business development.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="educationLevel"
+
+Bachelor's
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experienceRange"
+
+Less than 1 year
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="studentStatus"
+
+Student
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="jobType"
+
+Internship
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="skills"
+
+["Market Research", "Data Analysis", "Microsoft Excel", "Business Planning"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="address"
+
+{"county": "Kirinyaga", "subCounty": "Mwea", "ward": "Tebere", "details": "Tebere Market, Shop No. 15"}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="education"
+
+[{"school": "Kenyatta University", "degree": "Bachelor of Business Management", "fieldOfStudy": "Business Management", "graduationYear": 2026, "isCurrent": true}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experience"
+
+[{"title": "Research Assistant", "company": "University Business Department", "startDate": "2024-06-01", "endDate": "2024-08-31", "isCurrent": false, "description": "Assisted in market research projects and data collection"}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="achievements"
+
+["Dean's List 2023", "Best Business Proposal Award"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="certifications"
+
+[{"name": "Microsoft Office Specialist", "issuingBody": "Microsoft"}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="resume"; filename="john_mwangi_resume.pdf"
+Content-Type: application/pdf
+
+< ./resumes/john_mwangi_resume.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### 2. Create Profile for Faith Wanjiru
+POST {{baseUrl}}/api/studententireprofile
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="userId"
+
+cmerf06iu0004ujvslgi19vok
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+Faith Wanjiru
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+faith.wanjiru@example.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="summary"
+
+Dedicated nursing student with clinical experience and passion for patient care. Seeking opportunities in healthcare settings.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="educationLevel"
+
+Bachelor's
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experienceRange"
+
+1-2 years
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="studentStatus"
+
+Student
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="jobType"
+
+Part-time
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="skills"
+
+["Patient Care", "Medical Terminology", "Vital Signs", "EMR Systems"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="address"
+
+{"county": "Kirinyaga", "subCounty": "Gichugu", "ward": "Kabare", "details": "Kabare Health Centre Quarters"}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="education"
+
+[{"school": "Moi University", "degree": "Bachelor of Science in Nursing", "fieldOfStudy": "Nursing", "graduationYear": 2025, "isCurrent": true}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experience"
+
+[{"title": "Student Nurse", "company": "Eldoret Hospital", "startDate": "2024-01-15", "endDate": null, "isCurrent": true, "description": "Clinical rotations in various departments including pediatrics and emergency care"}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="achievements"
+
+["Outstanding Clinical Performance Award"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="certifications"
+
+[{"name": "Basic Life Support (BLS)", "issuingBody": "Kenya Red Cross"}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="resume"; filename="faith_wanjiru_resume.pdf"
+Content-Type: application/pdf
+
+< ./resumes/faith_wanjiru_resume.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### 3. Create Profile for Peter Otieno
+POST {{baseUrl}}/api/studententireprofile
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="userId"
+
+cmerf3b4z0006ujvsamn6p1an
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+Peter Otieno
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+peter.otieno@example.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="summary"
+
+Education student passionate about literature and language instruction. Seeking teaching opportunities.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="educationLevel"
+
+Bachelor's
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experienceRange"
+
+Less than 1 year
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="studentStatus"
+
+Student
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="jobType"
+
+Part-time
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="skills"
+
+["Lesson Planning", "Classroom Management", "English Literature", "Curriculum Development"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="address"
+
+{"county": "Kirinyaga", "subCounty": "Ndia", "ward": "Mukure", "details": "Mukure Teachers Quarters"}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="education"
+
+[{"school": "Maseno University", "degree": "Bachelor of Education Arts", "fieldOfStudy": "Education Arts", "graduationYear": 2027, "isCurrent": true}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experience"
+
+[{"title": "Tutor", "company": "Community Education Program", "startDate": "2024-03-01", "endDate": null, "isCurrent": true, "description": "Volunteer tutoring for secondary school students in English and Literature"}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="achievements"
+
+["Best Teaching Practice Award"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="certifications"
+
+[]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="resume"; filename="peter_otieno_resume.pdf"
+Content-Type: application/pdf
+
+< ./resumes/peter_otieno_resume.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### 4. Create Profile for Peter Juma
+POST {{baseUrl}}/api/studententireprofile
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="userId"
+
+cmerf5gb90008ujvsg1hy9frc
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+Peter Juma
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+peter.yade@example.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="summary"
+
+Education student with interest in special needs education. Seeking opportunities to develop teaching skills.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="educationLevel"
+
+Bachelor's
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experienceRange"
+
+Less than 1 year
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="studentStatus"
+
+Student
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="jobType"
+
+Internship
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="skills"
+
+["Special Education", "Classroom Assistance", "Student Assessment", "Educational Games"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="address"
+
+{"county": "Kirinyaga", "subCounty": "Kirinyaga Central", "ward": "Kerugoya", "details": "Kerugoya Town, Flat 4B"}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="education"
+
+[{"school": "Maseno University", "degree": "Bachelor of Education Arts", "fieldOfStudy": "Education Arts", "graduationYear": 2027, "isCurrent": true}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experience"
+
+[]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="achievements"
+
+["Education Club President"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="certifications"
+
+[]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="resume"; filename="peter_juma_resume.pdf"
+Content-Type: application/pdf
+
+< ./resumes/peter_juma_resume.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### 5. Create Profile for Alice Mwende
+POST {{baseUrl}}/api/studententireprofile
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="userId"
+
+cmerfasyb0000ujjsjs25bbvs
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+Alice Mwende
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+alice.mwende@example.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="summary"
+
+Computer Science student with frontend development skills. Passionate about creating user-friendly applications.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="educationLevel"
+
+Bachelor's
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experienceRange"
+
+1-2 years
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="studentStatus"
+
+Student
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="jobType"
+
+Internship
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="skills"
+
+["JavaScript", "React", "HTML/CSS", "Python", "UI/UX Design"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="address"
+
+{"county": "Kirinyaga", "subCounty": "Mwea", "ward": "Gathigiriri", "details": "Gathigiriri Tech Hub"}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="education"
+
+[{"school": "University of Nairobi", "degree": "Bachelor of Science in Computer Science", "fieldOfStudy": "Computer Science", "graduationYear": 2025, "isCurrent": true}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experience"
+
+[{"title": "Web Development Intern", "company": "Nairobi Tech Solutions", "startDate": "2024-01-10", "endDate": "2024-04-10", "isCurrent": false, "description": "Developed responsive web applications using React and Node.js"}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="achievements"
+
+["Hackathon Winner 2023", "Google Developer Scholarship"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="certifications"
+
+[{"name": "Google IT Support Professional", "issuingBody": "Google"}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="resume"; filename="alice_mwende_resume.pdf"
+Content-Type: application/pdf
+
+< ./resumes/alice_mwende_resume.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### 6. Create Profile for Brian Otieno
+POST {{baseUrl}}/api/studententireprofile
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="userId"
+
+cmerfb0nj0002ujjsfl7a27am
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+Brian Otieno
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+brian.otieno@example.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="summary"
+
+Mechanical Engineering student with hands-on workshop experience. Interested in automotive and manufacturing industries.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="educationLevel"
+
+Bachelor's
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experienceRange"
+
+1-2 years
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="studentStatus"
+
+Student
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="jobType"
+
+Full-time
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="skills"
+
+["CAD Design", "AutoCAD", "Mechanical Drafting", "Machine Operation", "Technical Drawing"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="address"
+
+{"county": "Kirinyaga", "subCounty": "Gichugu", "ward": "Ngariama", "details": "Ngariama Industrial Area"}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="education"
+
+[{"school": "Kenyatta University", "degree": "Bachelor of Science in Mechanical Engineering", "fieldOfStudy": "Mechanical Engineering", "graduationYear": 2025, "isCurrent": true}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experience"
+
+[{"title": "Engineering Intern", "company": "Kenya Vehicle Manufacturers", "startDate": "2023-12-01", "endDate": "2024-02-28", "isCurrent": false, "description": "Assisted in assembly line operations and quality control processes"}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="achievements"
+
+["Engineering Design Competition Finalist"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="certifications"
+
+[{"name": "AutoCAD Certified User", "issuingBody": "Autodesk"}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="resume"; filename="brian_otieno_resume.pdf"
+Content-Type: application/pdf
+
+< ./resumes/brian_otieno_resume.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### 7. Create Profile for Clara Njeri
+POST {{baseUrl}}/api/studententireprofile
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="userId"
+
+cmerfb8s20004ujjs4chnmaym
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+Clara Njeri
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+clara.njeri@example.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="summary"
+
+Business Administration student with interest in entrepreneurship and marketing. Seeking opportunities in business development.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="educationLevel"
+
+Bachelor's
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experienceRange"
+
+Less than 1 year
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="studentStatus"
+
+Student
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="jobType"
+
+Internship
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="skills"
+
+["Digital Marketing", "Social Media Management", "Business Planning", "Market Analysis"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="address"
+
+{"county": "Kirinyaga", "subCounty": "Kirinyaga Central", "ward": "Mutira", "details": "Mutira Business Center"}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="education"
+
+[{"school": "Strathmore University", "degree": "Bachelor of Business Administration", "fieldOfStudy": "Business Administration", "graduationYear": 2026, "isCurrent": true}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experience"
+
+[{"title": "Marketing Volunteer", "company": "University Entrepreneurship Club", "startDate": "2024-02-01", "endDate": null, "isCurrent": true, "description": "Managed social media accounts and organized marketing events"}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="achievements"
+
+["Business Pitch Competition Winner"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="certifications"
+
+[{"name": "HubSpot Social Media Marketing Certification", "issuingBody": "HubSpot"}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="resume"; filename="clara_njeri_resume.pdf"
+Content-Type: application/pdf
+
+< ./resumes/clara_njeri_resume.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### 8. Create Profile for David Kiptoo (first one)
+POST {{baseUrl}}/api/studententireprofile
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="userId"
+
+cmerfbozk0006ujjsei8x9v5f
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+David Kiptoo
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+david.kiptoo@example.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="summary"
+
+Civil Engineering student interested in infrastructure development and construction management.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="educationLevel"
+
+Bachelor's
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experienceRange"
+
+Less than 1 year
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="studentStatus"
+
+Student
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="jobType"
+
+Internship
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="skills"
+
+["AutoCAD", "Structural Analysis", "Construction Management", "Surveying"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="address"
+
+{"county": "Kirinyaga", "subCounty": "Ndia", "ward": "Kariti", "details": "Kariti Construction Site Quarters"}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="education"
+
+[{"school": "Moi University", "degree": "Bachelor of Science in Civil Engineering", "fieldOfStudy": "Civil Engineering", "graduationYear": 2027, "isCurrent": true}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experience"
+
+[]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="achievements"
+
+["Engineering Club Member"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="certifications"
+
+[]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="resume"; filename="david_kiptoo_1_resume.pdf"
+Content-Type: application/pdf
+
+< ./resumes/david_kiptoo_1_resume.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### 9. Create Profile for David Kiptoo (second one)
+PUT  {{baseUrl}}/api/studententireprofile/cmerex17n0002ujvsjajy2l4q
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="userId"
+
+cmere58qn0000ujvsvqp03trd
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+David KIMANI
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+david.kiptoonv@example.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="summary"
+
+Civil Engineering student with focus on sustainable construction practices and environmental impact assessment.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="educationLevel"
+
+Diploma
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experienceRange"
+
+1-2 years
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="studentStatus"
+
+Student
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="jobType"
+
+Full-time
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="skills"
+
+["Sustainable Design", "Environmental Impact Assessment", "Project Management", "AutoCAD"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="address"
+
+{"county": "Kirinyaga", "subCounty": "Mwea", "ward": "Thiba", "details": "Thiba Dam Project Site"}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="education"
+
+[{"school": "Moi College", "degree": "Diploma in Civil Engineering", "fieldOfStudy": "Civil Engineering", "graduationYear": 2025, "isCurrent": true}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="experience"
+
+[{"title": "Site Assistant", "company": "Thiba Dam Construction", "startDate": "2023-11-01", "endDate": null, "isCurrent": true, "description": "Assisted in site measurements and documentation for dam construction project"}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="achievements"
+
+["Environmental Sustainability Award"]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="certifications"
+
+[{"name": "OSHA Construction Safety Certification", "issuingBody": "National Construction Authority"}]
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="resume"; filename="david_kiptoo_2_resume.pdf"
+Content-Type: application/pdf
+
+< ./resumes/david_kiptoo_2_resume.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### 10. Get All Student Profiles
+GET {{baseUrl}}/api/studententireprofile
+Content-Type: application/json
+
+### 11. Get Specific Student Profile by ID
+GET {{baseUrl}}/api/studententireprofile
+Content-Type: application/json
