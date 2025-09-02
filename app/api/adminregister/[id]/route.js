@@ -33,7 +33,7 @@ export async function PUT(req, { params }) {
     if (body.password) {
       const hashedPassword = await bcrypt.hash(body.password, 10);
       passwordData = { user: { update: { password: hashedPassword } } };
-      delete body.password;
+      delete body.password;A
     }
 
     const updatedAdmin = await prisma.admin.update({

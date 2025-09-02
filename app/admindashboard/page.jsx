@@ -19,11 +19,14 @@ import {
   Calendar,
   MapPin,
   Clock,
+  Briefcase,
   Loader
 } from 'lucide-react';
+// Add to your navigationItems array
 import ProfileSettings from '../components/adminprofile/page.jsx';
 import Usermanagement from "../components/admintab/page.jsx"
 import Emailform from "../components/Emailform/page.jsx";
+import JobManagement from '../components/jobsdisplay/page.jsx';
 import { useSession, signOut } from 'next-auth/react';
 
 // --- Safe Fetch Wrapper ---
@@ -917,6 +920,8 @@ export default function CareerConnectApp() {
     { id: 'news-content', label: 'News & Content', icon: Newspaper },
     { id: 'profile-settings', label: 'Profile & Settings', icon: Settings },
     { id: 'events-calendar', label: 'Events Calendar', icon: Calendar },
+    // Add to your navigationItems array
+{ id: 'job-management', label: 'Job Management', icon: Briefcase },
     { id: 'email-form', label: 'Email Form', icon: Mail },
   ];
 
@@ -970,6 +975,15 @@ export default function CareerConnectApp() {
             <Emailform />
           </div>
         );
+       case 'job-management':
+  return (
+    <>
+      <header className="flex justify-between items-center mb-8">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">Job Management</h1>
+      </header>
+      <JobManagement />
+    </>
+  );
       default:
         return <DashboardOverview newsItems={safeNewsItems} metrics={safeMetrics} recentActivities={safeRecentActivities} />;
     }

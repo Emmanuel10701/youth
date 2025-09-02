@@ -5,11 +5,11 @@ let prisma;
 
 if (process.env.NODE_ENV === 'development') {
   if (!global.prisma) {
-    global.prisma = new PrismaClient(); // 👈 no log option here
+    global.prisma = new PrismaClient(); 
   }
   prisma = global.prisma;
 } else {
-  prisma = new PrismaClient(); // 👈 no log option here
+  prisma = new PrismaClient();
 }
 
 module.exports = prisma;
